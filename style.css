@@ -1,0 +1,582 @@
+body
+{
+	font-size: 14px;
+	color: #333;
+	background-color: #fff;
+	letter-spacing: 1px;
+}
+
+
+
+.overlay  /*we need to add overlay if we are using white color buttons so that the background behind the buttons will become dark  */
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 3;   /*not technically correct but to increase the brightness of the screen make the z-index as 2  */
+	background-color: rgba(0, 0, 0, 0.4);   /*a--> alpha  */  /*alpha denotes the transparency  */
+}
+
+
+.slides-navigation  /*the default z-index of the slides -navigation without changing which we wont be able to press the left and right buttons  */
+{
+	z-index: 6;
+}
+
+
+
+.slides-navigation .prev,   /*. denote the class which is to be styled  */
+.slides-navigation .next
+{
+	width: 47px;
+	height: 47px;
+	background-size: cover;   /*cover denotes --> Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges  */
+	background-repeat: no-repeat;  /*no-repeat denotes  --> The background-image is not repeated. The image will only be shown once  */
+}
+
+
+.slides-navigation a.prev  /*by using a.prev or a.next we assign the path more accurately and it wont get overridden by the superslides file */
+{  /*by using a. it will target the anchor tag  */
+	left:20px;
+	background-image: url(../img/icons/left_button.png);  /*../ goes back to the previous folder  */
+}
+
+
+.slides-navigation a.next  /*if a.next or a.prev is not used then the code inside the braces wont work as it will get overridden  */
+{
+	right: :20px;
+	background-image: url(../img/icons/right_button.png);
+}
+
+
+.titleMessage
+{
+	width: 100%;
+	height: 250px;
+	position: absolute;
+	top: 50%;
+	z-index: 5;  /*z-index is a priority ranker and between two elements the one with higher z-index will appear above the one with lower z-index  */
+	text-align: center;
+	margin-top: -12px;
+}
+
+
+.titleMessage .heading p
+{
+	color: #fff;
+	text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);  /*the values for the text shadow are for h-shadow v-shadow blur-radius color which are the properties of the text shadow  */
+	font-weight: 100;
+	letter-spacing: 7px;
+}
+
+
+.titleMessage .heading .main  /*changing the font size for the main p tag */
+{
+	font-size: 75px;
+}
+
+
+.titleMessage .heading .sub
+{
+	font-size: 37px;
+}
+
+
+.section
+{
+	padding: 100px 0;
+	height: 965px;  /*newly modified  *//*910*/
+
+}
+
+
+/*below is newly added  */
+.section p
+{
+	font-size: 23px;
+	/*font-weight: bold;*/
+}
+
+
+/*below is newly added  */
+.section h2
+{
+	font-size: 39px;
+}
+
+
+.aboutImage
+{
+	max-width: 100%;
+	height: 84%;   /*height not mentioned  */  /*modified*/
+	padding-right: 150px;
+}
+
+
+
+.skillsSection
+{
+	background-color: #d41e17;
+	color: #fff;
+	height: 600px; /* newly added  */
+
+}
+
+
+/*below is newly added  */
+.contactSection
+{
+	background-color: #d41e17;
+	color: #fff;
+	height: 500px; /* newly added  */
+
+}
+
+
+
+.skill
+{
+	text-align: center;
+	margin-left: 10px;
+	/*color: #1b1d1f;*/
+}
+
+
+.chart
+{
+	position: relative;
+	width: 152px;
+	height: 152px;
+	display: inline-block;
+	text-align: center;
+}
+
+
+.chart canvas
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+
+.chart .percent
+{
+	color: #000;
+	line-height: 152px;
+	display: inline-block;
+	font-size: 35px;
+}
+
+
+.chart .percent:after
+{
+	content: '%';  /* add a percentage sign to the number  */
+}
+
+
+/*below is newly added  */
+.statsSection
+{
+	height: 500px;
+}
+
+
+.sqaureItem
+{
+	margin-top: 30px;
+	position: relative;
+}
+
+
+.squareInnerContainer
+{
+	position: relative;
+	padding:50px 15px 35px;
+	text-align: center;
+	border: 2px solid #383231;
+	border-top: none;
+}
+
+
+.squareInnerContainer:before,
+.squareInnerContainer:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	width: 30%;
+	border-bottom: 2px solid #444;
+}
+
+
+.squareInnerContainer:before {
+	right: 0px;
+}
+
+
+
+.squareInnerContainer:after {
+	left: 0px
+}
+
+
+.squareContent h2 {
+	font-size: 56px;
+	margin-bottom: 10px;
+	font-weight: 400;
+	color: #e74c3c;
+}
+
+
+.squareContent h3 {
+	font-size: 13px;
+	font-weight: 600;
+	margin: 0;
+}
+
+
+.squareIcon
+{
+	position: absolute;
+	left: 50%;
+	top: -30px;
+	width: 40%;
+	height: 60px;
+	font-size: 45px;
+	margin-left: -20%;
+	color: #383231;
+}
+
+
+.contactButton
+{
+	color: #fff;
+	padding: 15px 20px;
+	display: inline-block;
+	margin-top: 20px;
+	border: 1px solid #fff;
+	border-radius: 2px;
+}
+
+
+.contactButton:hover
+{
+	text-decoration: none;
+	color: #000;
+	background-color: #fff;
+}
+
+
+.subHeading
+{
+	font-size: 24px;
+}
+
+
+.Heading
+{
+	font-size: 42px;
+}
+
+
+
+.resumeSection
+{
+	background-color: #fff;
+	color: #000;
+	height: 350px;
+
+}
+
+.resumeButton
+{
+	color: #000;
+	padding: 15px 20px;
+	display: inline-block;
+	margin-top: 20px;
+	border: 1px solid #000;
+	border-radius: 2px;
+	font-size: 19px;
+}
+
+
+.resumeButton:hover
+{
+	text-decoration: none;
+	color: #fff;
+	background-color: #383231;
+}
+
+
+.Portfoliosection
+{
+	background-color: #d41e17;  /*d41e17*/
+	color: #000;
+
+}
+
+
+
+/*modified font-size and color */
+.filter a
+{
+	color: #000;
+	border: 1px solid #000;
+	padding: 10px 28px;
+	display: block;
+	font-size: 21px;
+} 
+
+
+.filter li
+{
+	display: inline-block;
+	padding: 5px;
+}
+
+
+.filter .current  /* to style the icon which is currently being hovered on  */
+{
+	background-color: #383231;/*modified color*/
+	border-color: #383231;/*modified color*/
+	color: #fff;
+}
+
+
+.filter
+{
+	width: 100%;
+	text-align: center;
+}
+
+
+.Portfoliosection .heading
+{
+	text-align: center;
+	padding-bottom: 40px;
+	width: 100%;
+	font-size: 45px;
+	padding-top: 47px;   /*added new */
+}
+
+
+.items li
+{
+	display: inline-block;
+	padding: 5px;
+}
+
+
+.itemsContainer
+{
+	width: 100%;
+}
+
+
+.items li img
+{
+	width: 100%;
+	/*for smooth transitioning while hovering and while the image is getting zoomed a liitle  */
+	-webkit-transition: all 0.2s linear, 1s; /*for smooth transition between the images  */
+	-moz-transition: all 0.2s linear, 1s;/*for mozilla*/
+	-o-transition: all 0.2s linear, 1s;/*for opera */
+	-ms-transition: all 0.2s linear, 1s;/* for internet explorer i guess */
+	-transition: all 0.2s linear, 1s;/*for all the rest of browser  */
+}
+
+
+.items .item
+{
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+
+.items .icons
+{
+	position: absolute;
+	width: 90px;
+	height: 40px;
+	left: 50%;
+	top: 50%;
+	margin: -20px auto 0 -47px;
+	text-align: center;
+	z-index: 3;
+}
+
+
+.items .icons i
+{
+	color: #1c189e;
+	font-size: 20px;
+	margin-top: 9px;
+}
+
+
+.items a
+{
+	width: 40px;
+	height: 40px;
+	background-color: #1889ba;  /*change the background color of the icon from here  */
+	position: relative;
+	display: inline-block;
+
+
+	/*for the smooth transitioning of te icons when being hovered on  */
+	/*the below code is for the smooth transitioning in between the images  */
+	/*change the speed of the transitioning by changing the value of the linear option  */
+	-webkit-transition: all 0.2s linear, 0.2s; /*for smooth transition between the images  */
+	-moz-transition: all 0.2s linear, 0.2s;/*for mozilla*/
+	-o-transition: all 0.2s linear, 0.2s;/*for opera */
+	-ms-transition: all 0.2s linear, 0.2s;/* for internet explorer i guess */
+	-transition: all 0.2s linear, 0.2s;/*for all the rest of browser  */
+}
+
+
+.items .imageOverlay
+{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0;  /*The opacity property specifies the opacity/transparency of an element*/
+
+	/*the below code is for the smooth transitioning in between the images  */
+	-webkit-transition: all 0.2s linear, 1s; /*for smooth transition between the images  */
+	-moz-transition: all 0.2s linear, 1s;/*for mozilla*/
+	-o-transition: all 0.2s linear, 1s;/*for opera */
+	-ms-transition: all 0.2s linear, 1s;/* for internet explorer i guess */
+	-transition: all 0.2s linear, 1s;/*for all the rest of browser  */
+}
+
+
+.items .item:hover .imageOverlay
+{
+	opacity: 1;
+}
+
+
+/*the below code till .items .item:hover .projectLink is for the icons appearing only when they are being hovered on  */
+
+.items .openButton
+{
+	float: left;
+	left: -200px
+}
+
+
+.items .projectLink
+{
+	float: right;
+	right: -200px;
+}
+
+
+.items .item:hover .openButton
+{
+	left: 0px;
+}
+
+
+.items .item:hover .projectLink
+{
+	right: 0px;
+}
+
+/*till here  */
+
+
+/*to zoom the image when being hovered on */
+.items .items:hover img
+{
+	/*the value in the scale part represents the coordinate for x and y axis */
+	-webkit-transform: scale(1.05, 1.05); /*for zooming the image while hovering*/
+	-moz-transform: scale(1.05, 1.05);/*for mozilla*/
+	-o-transform: scale(1.05, 1.05);/*for opera */
+	-ms-transform: scale(1.05, 1.05);/* for internet explorer i guess */
+	-transform: scale(1.05, 1.05);/*for all the rest of browser  */
+}
+
+
+/*to change the number of images in a single row change the value of the padding  */
+/*
+.items 
+{
+	padding: 0;
+}
+*/
+
+/*changes made to change the background color for the portfolio section  
+1.changed the name of the class of the div containing portfolio from section to Portfoliosection
+2.added a new css code for .PortfolioSection chaging the background color and the text color
+3.changed the .section .heading to .Portfoliosection .heading  */
+
+
+.copyrightSection
+{
+	background-color: #000;
+	color: #fff;
+	padding: 30px 5px;
+}
+
+/*change the padding such that the letters or fonts dont overlaps when the screen size is minimized*/
+
+.copyrightSection p
+{
+	margin: 0;
+}
+
+
+  /*# for styling by the id name  */
+#navigation {
+	background-color: #e74c3c;
+    padding: 20px 10px;
+    z-index: 100;
+    width: 100%;
+}
+
+#navigation li {
+	padding: 0 10px;
+}
+
+#navigation li a {
+	color: #fff;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+	color: #fff;
+}
+
+.navbar-toggler-icon {
+	background: url(../img/icons/menu.png);
+	background-size: 100%;
+}
+
+.fixedNav #navigation {
+	position: fixed;
+	top: 0;
+}
+
+
+.loader {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+}
+
+.loader .inner {
+	width: 100%;
+	height: 100%;
+	background: url(../img/loader_1.gif) center center no-repeat;
+}
+
+
+
